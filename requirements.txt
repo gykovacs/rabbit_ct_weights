@@ -6,3 +6,4 @@ bokeh
 openpyxl
 tqdm
 imageio
+ipykernel

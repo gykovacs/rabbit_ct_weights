@@ -2,20 +2,18 @@ import pandas as pd
 
 from sklearn.model_selection import RepeatedKFold
 from sklearn.metrics import r2_score
-from mltoolkit.automl import R2_score, RMSE_score
-from mltoolkit.optimization import SimulatedAnnealing, UniformIntegerParameter, ParameterSpace, BinaryVectorParameter
+from maweight.mltoolkit.automl import R2_score, RMSE_score
+from maweight.mltoolkit.optimization import SimulatedAnnealing, UniformIntegerParameter, ParameterSpace, BinaryVectorParameter
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import RepeatedKFold
 
-from mltoolkit.automl import *
+from maweight.mltoolkit.automl import *
 
 random_state= 11
 
 def model_selection(features, 
             target, 
             objectives=[KNNR_Objective, 
-                        #SVR_RBF_Objective, 
-                        #XGBR_Objective, 
                         LinearRegression_Objective, 
                         LassoRegression_Objective,
                         RidgeRegression_Objective,
