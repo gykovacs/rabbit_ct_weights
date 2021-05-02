@@ -19,7 +19,8 @@ def model_selection(features,
                         RidgeRegression_Objective,
                         PLSRegression_Objective],
             dataset=None,
-            type=None):
+            type=None,
+            disable_feature_selection=False):
     all_results= []
 
     for o in objectives:
@@ -33,7 +34,8 @@ def model_selection(features,
                             preprocessor=StandardScaler(), 
                             optimizer=SimulatedAnnealing(verbosity=0,
                                                             random_state=random_state),
-                            random_state=random_state)
+                            random_state=random_state,
+                            disable_feature_selection=disable_feature_selection)
         results['model_selection_score']= ms.select()['score']
         results['features']= list(features.columns[ms.get_best_model()["features"]])
         results['parameters']= ms.get_best_model()['model'].regressor.get_params()
