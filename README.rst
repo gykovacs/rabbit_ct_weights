@@ -82,3 +82,5 @@ Start a jupyter server in the active environment by issuing
     > jupyter notebook
 
 And run the notebook ```003_orchestration.ipynb``` to carry out all steps of the analysis.
+
+Note that due to the large number of CT images and registered masks, the execution requires about 150Gb free space on the disk.
