@@ -7,3 +7,5 @@ openpyxl
 tqdm
 imageio
 ipykernel
+tqdm
+jsonlines
